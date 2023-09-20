@@ -15,22 +15,23 @@
   <div class="login-container">
     <h2>SignUp</h2>
     <form action="#" method="POST">
+      {% csrf_token %}
       <input type="radio" id="c1" name="c1" value="learner"> Learner&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="radio" id="c1" name="c1" value="learner"> Instructor
       <div class="form-group">
         <p _ngcontent-jfu-c157=""><span _ngcontent-jfu-c157=""></span></p>
 
-        <input type="text" id="name1" name="uname" required placeholder="UserName"></br><br />
+        <input type="text" id="name1" name="username" required placeholder="UserName"></br><br />
 
-        <input type="text" id="name2" name="fname" required placeholder="FirstName"></br><br />
+        <input type="text" id="name2" name="first_name" required placeholder="FirstName"></br><br />
 
-        <input type="text" id="name3" name="lname" required placeholder="LastName"></br><br />
+        <input type="text" id="name3" name="last_name" required placeholder="LastName"></br><br />
 
         <input type="email" id="email" name="email" required placeholder=" Email"></br><br />
 
         <div class="form-group">
-
-          <input type="password" id="password" name="password" required placeholder="Password"></br>
+          <input type="password" id="password" name="password1" required placeholder="Password"></br>
+          <input type="password" id="password" name="password2" required placeholder="Confirm Password"></br>
         </div>
         <button type="submit" class="login-button">Signup</button>
         <button type="reset" class="cancle-button">Cancel</button>
