@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import BasePage
+from .views import MainPage, MyLoginView, SignupPage
 
-app_name = 'core'
+app_name = "core"
 
 urlpatterns = [
-    path("", BasePage.as_view(), name="base_page"),
+    path("", MainPage.as_view(), name="main_page"),
+    path("login/", MyLoginView.as_view(), name="login"),
+    path("signup/", SignupPage.as_view(), name="signup"),
 ]

@@ -11,3 +11,8 @@ ipython
 
 # Admin
 django-jazzmin
+
+# Clean Coding
+flake8
+isort
+black
