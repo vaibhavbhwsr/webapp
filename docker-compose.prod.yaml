@@ -1,0 +1,40 @@
+services:
+
+  # Django WSGI for Gunicorn
+  wsgi_app:
+    container_name: mysite_wsgi
+    build:
+      context: ./webapp
+    volumes:
+      - webapp:/webapp
+    ports:
+      - "8000:8000"
+    command: gunicorn webapp.wsgi:application --bind 0.0.0.0:8000
+    depends_on:
+      - db
+
+  # Database postgres
+  db:
+    container_name: postgres_db
+    image: postgres
+    volumes:
+      - webapp_db:/var/lib/postgres/data
+    environment:
+      - POSTGRES_DB=webapp_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=psql
+
+  # Nginx
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx-setup.conf:/etc/nginx/conf.d/default.conf:ro
+      - webapp:/webapp
+    depends_on:
+      - wsgi_app
+
+volumes:
+  webapp:
+  webapp_db:
