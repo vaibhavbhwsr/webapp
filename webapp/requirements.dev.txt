@@ -1,0 +1,13 @@
+-r requirements.txt
+
+# Main
+psycopg2-binary
+python-dotenv
+
+# Development tools
+django-debug-toolbar
+django-extensions
+ipython
+
+# Admin
+django-jazzmin
