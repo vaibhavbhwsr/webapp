@@ -50,6 +50,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Packages
+    'crispy_forms',
+    'crispy_bootstrap5',
+
     # Custom app
     'core',
     'users',
@@ -70,7 +74,7 @@ ROOT_URLCONF = 'webapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [os.path.join(BASE_DIR / 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -159,3 +163,6 @@ STATIC_ROOT = Path(BASE_DIR, 'staticfiles')
 LOGIN_REDIRECT_URL = '/users/home/'
 
 LOGOUT_REDIRECT_URL = '/'
+
+# Makes Crispy use bootstrap5
+CRISPY_TEMPLATE_PACK = "bootstrap5"

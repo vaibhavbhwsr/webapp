@@ -16,3 +16,7 @@ django-jazzmin
 flake8
 isort
 black
+
+# Others
+django-crispy-forms
+crispy-bootstrap5

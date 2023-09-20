@@ -19,10 +19,9 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   padding: 30px;
   width: 600px;
-  text-align: center;
   margin-left: 700px;
   margin-right: 50px;
-  height: 550px;
+  height: 95%;
 }
 
 .login-container h2 {
