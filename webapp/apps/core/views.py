@@ -18,6 +18,10 @@ User = get_user_model()
 # Create your views here.
 
 
+class IndexView(TemplateView):
+    template_name = "core/index.html"
+
+
 class SignupView(UserPassesTestMixin, SuccessMessageMixin, CreateView):
     form_class = RegistrationForm
     template_name = 'core/signup.html/'
@@ -49,10 +53,6 @@ class MyLoginView(SuccessMessageMixin, LoginView):
     template_name = "core/login.html"
     redirect_authenticated_user = True
     success_message = '%(username)s, Welcome Here!'
-
-
-class MainPage(TemplateView):
-    template_name = "core/main.html"
 
 
 class LoginPage(TemplateView):
