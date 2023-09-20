@@ -17,5 +17,5 @@ class User(AbstractUser):
         blank=True,
         null=True,
         choices=USER_ROLE,
-        default=4,
+        default="Learner",
     )
