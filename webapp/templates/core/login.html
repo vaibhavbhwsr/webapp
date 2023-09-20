@@ -16,11 +16,12 @@
 <body>
   <div class="login-container">
     <h2>Login</h2>
-    <form action="#" method="POST">
+    <form method="POST">
+      {% csrf_token %}
       <div class="form-group">
         <p _ngcontent-jfu-c157="">New user? <span _ngcontent-jfu-c157=""><a href="{% url 'core:signup' %}">Create an account</a> </span></p>
 
-        <input type="text" id="email" name="email" required placeholder=" Email / Username">
+        <input type="text" id="username" name="username" required placeholder=" Email / Username">
       </div>
       <div class="form-group">
 

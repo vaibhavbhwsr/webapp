@@ -153,3 +153,9 @@ MEDIA_ROOT = Path(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [Path(BASE_DIR, 'static'), ]
 STATIC_ROOT = Path(BASE_DIR, 'staticfiles')
+
+
+# Redirect After Login and Logout
+LOGIN_REDIRECT_URL = '/users/home/'
+
+LOGOUT_REDIRECT_URL = '/'

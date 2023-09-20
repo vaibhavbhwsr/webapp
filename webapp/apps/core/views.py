@@ -4,7 +4,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth import get_user_model
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -22,7 +22,7 @@ class IndexView(TemplateView):
     template_name = "core/index.html"
 
 
-class SignupView(UserPassesTestMixin, SuccessMessageMixin, CreateView):
+class MySignupView(UserPassesTestMixin, SuccessMessageMixin, CreateView):
     form_class = RegistrationForm
     template_name = 'core/signup.html/'
     success_url = '/'
@@ -41,7 +41,7 @@ class SignupView(UserPassesTestMixin, SuccessMessageMixin, CreateView):
         '''
         This function stop accessing signup page to logged in user
         '''
-        return HttpResponseRedirect(reverse("home"))
+        return HttpResponseRedirect(reverse("users:home"))
 
 
 class MyLoginView(SuccessMessageMixin, LoginView):
@@ -53,11 +53,3 @@ class MyLoginView(SuccessMessageMixin, LoginView):
     template_name = "core/login.html"
     redirect_authenticated_user = True
     success_message = '%(username)s, Welcome Here!'
-
-
-class LoginPage(TemplateView):
-    template_name = "core/login.html"
-
-
-class SignupPage(TemplateView):
-    template_name = "core/signup.html"
