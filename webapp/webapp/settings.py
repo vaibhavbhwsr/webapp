@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'users',
     'posts',
     'course',
+    'library',
 ]
 
 MIDDLEWARE = [
