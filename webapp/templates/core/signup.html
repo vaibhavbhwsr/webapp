@@ -14,7 +14,7 @@
 <body>
   <div class="login-container">
     <h2>SignUp</h2>
-    <form action="#" method="POST">
+    <form method="POST">
       {% csrf_token %}
       <input type="radio" id="c1" name="c1" value="learner"> Learner&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="radio" id="c1" name="c1" value="learner"> Instructor
@@ -29,10 +29,10 @@
 
         <input type="email" id="email" name="email" required placeholder=" Email"></br><br />
 
-        <div class="form-group">
-          <input type="password" id="password" name="password1" required placeholder="Password"></br>
-          <input type="password" id="password" name="password2" required placeholder="Confirm Password"></br>
-        </div>
+        <input type="password" id="password" name="password1" required placeholder="Password"></br>
+
+        <input type="password" id="password" name="password2" required placeholder="Confirm Password"></br>
+
         <button type="submit" class="login-button">Signup</button>
         <button type="reset" class="cancle-button">Cancel</button>
 
