@@ -1,7 +1,7 @@
-from django.urls import path
-from .views import IndexView, MyLoginView, MySignupView
 from django.contrib.auth import views as auth_views
+from django.urls import path
 
+from .views import IndexView, MyLoginView, MySignupView
 
 app_name = "core"
 

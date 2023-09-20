@@ -23,6 +23,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("core.urls", namespace="core")),
     path("users/", include("users.urls", namespace="users")),
+    path("posts/", include("posts.urls", namespace="posts")),
+    path("course/", include("course.urls", namespace="course")),
+    path("library/", include("library.urls", namespace="library")),
 ]
 
 if settings.DEBUG:
