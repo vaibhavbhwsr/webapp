@@ -2,7 +2,7 @@ services:
 
   # Database postgres
   db:
-    container_name: postgres_db
+    container_name: postgres_webapp_db
     image: postgres
     volumes:
       - ./database/db:/var/lib/postgres/data

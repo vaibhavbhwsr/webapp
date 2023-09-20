@@ -21,7 +21,7 @@ class UpdateProfileView(UpdateView, SuccessMessageMixin):
     model = User
     template_name = "users/update_profile.html"
     fields = ["first_name", "last_name", "email", "phone", "address", "dp"]
-    success_url = "/login"
+    success_url = "/users/home/"
     success_message = "Your Profile Updated Successfully!"
 
     def get_object(self, **kwargs):
