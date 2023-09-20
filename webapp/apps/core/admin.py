@@ -10,5 +10,7 @@ User = get_user_model()
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
     fieldsets = UserAdmin.fieldsets + (
-        ("Additional info", {"fields": ("phone", "address")}),
+        ("Additional info", {"fields": (
+            "phone", "address", "role", "dp"
+        )}),
     )

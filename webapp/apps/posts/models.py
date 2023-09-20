@@ -15,7 +15,7 @@ class Post(BaseModel):
     )  # API also
     date_posted = models.DateTimeField(default=timezone.now)
     description = models.CharField(max_length=255, blank=True)
-    picture = models.ImageField(upload_to="images/post", blank=True)
+    picture = models.ImageField(upload_to="posts/", blank=True)
     tags = models.CharField(max_length=100, blank=True)
     likes = models.ManyToManyField(User, related_name="likes", blank=True)
     comment = models.ManyToManyField(User, through="Comment")

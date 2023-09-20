@@ -44,3 +44,4 @@ class User(AbstractUser):
         choices=USER_ROLE,
         default="Learner",
     )
+    dp = models.ImageField(upload_to="dp/", blank=True)
