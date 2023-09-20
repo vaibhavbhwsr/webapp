@@ -170,3 +170,16 @@ LOGOUT_REDIRECT_URL = '/'
 
 # Makes Crispy use bootstrap5
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
+# # Set Console as a Backend to reset password
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# # Setting Email Backend with smtp django
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+# # secret code created on account not password
+# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+# EMAIL_USE_TLS = True

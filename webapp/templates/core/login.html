@@ -24,9 +24,16 @@
       {% csrf_token %}
       <div class="form-group">
         {{ form | crispy }}
-        <button type="submit" class="login-button">Login</button>
-        <button type="reset" class="cancle-button">Cancel</button>
+        <button type="submit" class="login-button my-3">Login</button>
+        <a class="btn btn-lg btn-warning btn-block float-end my-3" href="{% url 'core:password_reset' %}">Forgot Password?
+        </a>
     </form>
+    <small>
+      <p class="text-center my-5">
+        Not registered yet?
+        <a href="{% url 'core:signup' %}"><u><b>Register Now!</b></u></a>
+      </p>
+    </small>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
