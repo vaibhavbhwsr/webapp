@@ -6,14 +6,11 @@ from django.views.generic import TemplateView, UpdateView
 
 # Create your views here.
 
+User = get_user_model()
+
 
 class HomePage(TemplateView):
     template_name = "users/home.html"
-
-
-User = get_user_model()
-
-# Create your models here.
 
 
 @method_decorator(login_required, name="dispatch")
