@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     # Custom app
     'core',
     'users',
+    'posts',
 ]
 
 MIDDLEWARE = [

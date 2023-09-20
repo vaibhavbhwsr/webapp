@@ -20,3 +20,9 @@ black
 # Others
 django-crispy-forms
 crispy-bootstrap5
+
+# Media
+pillow
+
+# Deployment
+gunicorn
