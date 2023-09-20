@@ -7,6 +7,10 @@ User = get_user_model()
 # Create your models here.
 
 
+# --------------------------------------------------------------------------------------
+# Group Chat
+# --------------------------------------------------------------------------------------
+
 class GroupChat(BaseModel):
     content = models.CharField(max_length=255)
     timestamp = models.DateTimeField(auto_now=True)
@@ -25,6 +29,10 @@ class Group(BaseModel):
     def __str__(self):
         return self.name
 
+
+# --------------------------------------------------------------------------------------
+# One to One Chat
+# --------------------------------------------------------------------------------------
 
 class PrivateChat(BaseModel):
     content = models.CharField(max_length=255)
@@ -51,6 +59,10 @@ class OneOneGroup(BaseModel):
     def __str__(self):
         return f"{self.name}"
 
+
+# --------------------------------------------------------------------------------------
+# Video Chat
+# --------------------------------------------------------------------------------------
 
 class VideoChatRoomMember(BaseModel):
     name = models.CharField(max_length=200)

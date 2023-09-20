@@ -7,6 +7,11 @@ User = get_user_model()
 # Create your models here.
 
 
+# --------------------------------------------------------------------------------------
+# Mentorship
+# --------------------------------------------------------------------------------------
+
+
 class MentorProfile(BaseModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     description = models.TextField()
@@ -37,3 +42,36 @@ class MentorshipBooking(models.Model):
 
     def __str__(self):
         return f"{self.mentee.username}'s booking of {self.session.title}"
+
+
+# --------------------------------------------------------------------------------------
+# Skills
+# --------------------------------------------------------------------------------------
+
+
+class Skill(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class UserSkill(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    skill = models.ForeignKey(Skill, on_delete=models.CASCADE)
+    current_level = models.PositiveIntegerField(default=0)
+    experience_points = models.PositiveIntegerField(default=0)
+
+    def __str__(self):
+        return f"{self.user.user.username}'s skill in {self.skill.name}"
+
+
+class SkillProgress(models.Model):
+    user_skill = models.ForeignKey(UserSkill, on_delete=models.CASCADE)
+    date_completed = models.DateField()
+    achievement_details = models.TextField()
+    # Add other fields as needed to track progress
+
+    def __str__(self):
+        return f"{self.user_skill.user.user.username}'s progress in {self.user_skill.skill.name} on {self.date_completed}"
