@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from django import forms
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import password_validation
-
+from django.contrib.auth.forms import AuthenticationForm, UsernameField
 
 User = get_user_model()
 
@@ -50,5 +50,26 @@ class RegistrationForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['password1'].widget.attrs.update({'placeholder': _('Password')})
-        self.fields['password2'].widget.attrs.update({'placeholder': _('Confirm password')})
+        self.fields["password1"].widget.attrs.update({"placeholder": _("Password")})
+        self.fields["password2"].widget.attrs.update(
+            {"placeholder": _("Confirm password")}
+        )
+
+
+class MyLoginForm(AuthenticationForm):
+    username = UsernameField(
+        label='',
+        widget=forms.TextInput(attrs={"autofocus": True, "placeholder": "Username"})
+    )
+    password = forms.CharField(
+        label=_(""),
+        strip=False,
+        widget=forms.PasswordInput(
+            attrs={"autocomplete": "current-password", "placeholder": "Password"}
+        ),
+    )
+
+    class Meta:
+        labels = {
+            "username": "",
+        }
