@@ -13,6 +13,10 @@ class HomePage(TemplateView):
     template_name = "users/home.html"
 
 
+class MentorView(TemplateView):
+    template_name = "users/mentors.html"
+
+
 @method_decorator(login_required, name="dispatch")
 class UpdateProfileView(UpdateView, SuccessMessageMixin):
     model = User

@@ -16,13 +16,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item  mx-5">
-          <a class="nav-link" href="#">Connect With Mentor</a>
+          <a class="nav-link" href="{% url 'users:mentor' %}">Connect With Mentor</a>
         </li>
         <li class="nav-item  mx-5">
-          <a class="nav-link" href="#">Enroll In Course</a>
+          <a class="nav-link" href="{% url 'course:list' %}">Enroll In Course</a>
         </li>
         <li class="nav-item  mx-5">
-          <a class="nav-link" href="#">Study Materials</a>
+          <a class="nav-link" href="{% url 'library:books' %}">Study Materials</a>
         </li>
         <li class="nav-item  mx-5">
           <a class="nav-link" href="#">Latest Feeds</a>

@@ -1,12 +1,13 @@
 from django.contrib.auth import views as auth_views
 from django.urls import path, reverse_lazy
 
-from .views import HomePage, UpdateProfileView
+from .views import HomePage, UpdateProfileView, MentorView
 
 app_name = "users"
 
 urlpatterns = [
     path("home/", HomePage.as_view(), name="home"),
+    path("mentor/", MentorView.as_view(), name="mentor"),
     path("update-profile/", UpdateProfileView.as_view(), name="update_profile"),
     # Password change
     path(

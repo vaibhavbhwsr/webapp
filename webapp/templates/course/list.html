@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Slider</title>
+  <style>
+  /* Container for the slider */
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* The slider itself */
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    /* Adjust as needed */
+    padding: 20px;
+  }
+
+  /* Individual product card */
+  .product-card {
+    flex: 0 0 calc(33.33% - 20px);
+    /* Adjust for the number of cards you want to show */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Product image */
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Product rating and price */
+  .product-info {
+    margin-top: 10px;
+  }
+
+  /* Customize the appearance of the product card as needed */
+
+  </style>
+</head>
+
+<body>
+
+  <h1> Treading Courses</h1>
+  <div class="slider-container">
+    <div class="slider">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/images.jpeg' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Introduction to Rural Education</h3>
+          <p>Rating: 4.5</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/images1.jpeg' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Fitness and Exercise</h3>
+          <p>Rating: 4.0</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/imag2.png' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Mental Health and Well-being</h3>
+          <p>Rating: 4.5</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/images3.jpeg' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Environmental Science</h3>
+          <p>Rating: 4.0</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/images4.jpeg' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Sports and Recreation</h3>
+          <p>Rating: 4.5</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+
+      <!-- Add more product cards as needed -->
+
+    </div>
+  </div>
+
+  <h1> Latest Courses</h1>
+  <div class="slider-container">
+    <div class="slider">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/images5.jpeg' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Law and Legal Studies</h3>
+          <p>Rating: 4.5</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/images6.jpeg' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Education and Teaching</h3>
+          <p>Rating: 4.5</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/images7.jpeg' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Visual Arts (Painting, Drawing, Sculpture)</h3>
+          <p>Rating: 4.0</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{% static 'img/images8.jpeg' %}" alt="">
+        </div>
+        <div class="product-info">
+          <h3>Home Improvement and DIY</h3>
+          <p>Rating: 4.5</p>
+          <p>Price: ₹ 100</p>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>

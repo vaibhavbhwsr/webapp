@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Book Slideshow</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include your custom CSS (styles.css) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Library Book Slideshow</h1>
+        <div id="bookCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{% static 'img/book1.jpg' %}" class="card-img-top" alt="Book 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book 1 Title</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">Genre: Fiction</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{% static 'img/book1.jpg' %}" class="card-img-top" alt="Book 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book 2 Title</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">Genre: Non-fiction</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{% static 'img/book1.jpg' %}" class="card-img-top" alt="Book 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book 3 Title</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">Genre: Mystery</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{% static 'img/book1.jpg' %}" class="card-img-top" alt="Book 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book 3 Title</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">Genre: Mystery</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{% static 'img/book1.jpg' %}" class="card-img-top" alt="Book 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book 3 Title</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">Genre: Mystery</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="{% static 'img/book1.jpg' %}" class="card-img-top" alt="Book 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book 3 Title</h5>
+                                    <p class="card-text">Author: Author Name</p>
+                                    <p class="card-text">Genre: Mystery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more slides with 5 cards each as needed -->
+            </div>
+
+            <!-- Controls -->
+            <a class="carousel-control-prev" href="#bookCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#bookCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS (jQuery and Popper.js are required) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
