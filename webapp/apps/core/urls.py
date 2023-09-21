@@ -1,12 +1,13 @@
 from django.contrib.auth import views as auth_views
 from django.urls import path, reverse_lazy
 
-from .views import IndexView, MyLoginView, MySignupView
+from .views import IndexView, MyLoginView, MySignupView, AboutView
 
 app_name = "core"
 
 urlpatterns = [
     path("", IndexView.as_view(), name="index"),
+    path("about/", AboutView.as_view(), name="about"),
     path("login/", MyLoginView.as_view(), name="login"),
     path("signup/", MySignupView.as_view(), name="signup"),
     path("accounts/logout/", auth_views.LogoutView.as_view(), name="logout"),

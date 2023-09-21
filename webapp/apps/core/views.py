@@ -17,6 +17,10 @@ class IndexView(TemplateView):
     template_name = "core/index.html"
 
 
+class AboutView(TemplateView):
+    template_name = "core/about.html"
+
+
 class MySignupView(UserPassesTestMixin, SuccessMessageMixin, CreateView):
     form_class = RegistrationForm
     template_name = "core/signup.html/"

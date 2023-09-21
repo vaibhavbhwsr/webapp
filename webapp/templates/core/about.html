@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .fa {
+        padding: 20px;
+        font-size: 15px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius:50%;
+      }
+      
+      .fa:hover {
+          opacity: 0.7;
+      }
+      
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+      
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+      
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+      
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+    </style>
+</head>
+
+<body>
+
+  <!-- Navbar (You can create a separate navbar component) -->
+  <nav class="navbar navbar-inverse" style="background-color: #141414;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar" style="color: aliceblue;">
+        <ul class="nav navbar-nav">
+          <li> <img src="{% static 'img/logo.jpg' %}" alt="logo" style="width:60px; height:50px"></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Libraries</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registration</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav><br><br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3 align="center" style="color:Red;">Principal message</h3>
+        <p style="font-size:x-large;"><i>At Alpha International School, every student is believed to be a unique individual with the potential to make a positive contribution to the school and society. The school aims to provide direction, advice and support, which students require to reach their full potential and nurture in every student a strong sense of self-esteem and personal integrity, with a respectful, caring attitude towards others.</i></p>
+      </div>
+      <div class="col-sm-6">
+        <img src="{% static 'img/img9.jpg' %}" style="width:100%;height:350px; margin:-20px;">
+      </div>
+    </div>
+  </div><br /><br />
+  <div class="container-fluid" style="background-color:#141414 ;height: 380px; color: aliceblue;margin: left -3px;;">
+    <div class="row">
+      <div class="col-sm-4">
+        <h1 style="color: aliceblue;">Location</h1>
+      </div>
+      <div class="col-sm-4">
+        <h1 style="color: aliceblue;">Contact Us</h1>
+      </div>
+      <div class="col-sm-4">
+        <h1 style="color: aliceblue;">Opening hours</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+      <div class="col-sm-4">
+        <h3>Email:</h3>
+      </div>
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4" style="text-shadow:1px 1px red;">
+        <h3></h3>
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+    <div class="row">
+      <hr />
+      <marquee scrollamount="12">
+        <h4 style="font-size:large;">Grow your mind and better opportunities you will find</h4>
+      </marquee>
+      <hr />
+    </div>
+    <div class="row" style="text-shadow:1px 1px yellow; margin:20px;">
+      <a href="http://facebook.com" class="fa fa-facebook"></a>
+      <a href="http://twitter.com" class="fa fa-twitter"></a>
+      <a href="http://google.com" class="fa fa-google"></a>
+      <a href="http://linkedin.com" class="fa fa-linkedin"></a>
+    </div>
+  </div>
+
+</body>
+
+</html>

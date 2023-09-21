@@ -12,15 +12,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Document</title>
   <style>
-    .carousel-inner img {
-      width: 100%;
-      height: 100%;
-    }
-    </style>
+    #demo{
+        margin-left: -15px;
+        margin-right: -14px;
+      }
+      .fa {
+        padding: 20px;
+        font-size: 15px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+        border-radius:50%;
+      }
+
+      .fa:hover {
+          opacity: 0.7;
+      }
+
+      .fa-facebook {
+        background: #3B5998;
+        color: white;
+      }
+
+      .fa-twitter {
+        background: #55ACEE;
+        color: white;
+      }
+
+      .fa-google {
+        background: #dd4b39;
+        color: white;
+      }
+
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+
+      /* Make the image fully responsive */
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+ </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse" style="background-color: #141414;">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -28,58 +72,62 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
-          <img src="{% static 'img/logo.png' %}" alt="logo" style="width:40px;">
-        </a>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
+      <div class="collapse navbar-collapse" id="myNavbar" style="color: aliceblue;">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="Default.aspx">Home</a></li>
-          <li><a href="About.aspx">About</a></li>
-          <li><a href="Lab.aspx">Lab</a></li>
-          <li><a href="contact1.aspx">Contact</a></li>
+          <li> <img src="{% static 'img/logo.jpg' %}" alt="logo" style="width:60px; height:50px"></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <li><a href="{% url 'core:index' %}">Home</a></li>
+          <li><a href="{% url 'core:about' %}">About</a></li>
+          <li><a href="#">Libraries</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="{% url 'core:login' %}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          <li><a href="{% url 'core:signup' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="{% url 'core:signup' %}"><span class="glyphicon glyphicon-user"></span> Registration</a></li>
         </ul>
       </div>
     </div>
   </nav>
+
+  <!-- Indicators -->
   <div class="container-fluid">
     <div id="demo" class="carousel slide">
-
       <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0"></li>
         <li data-target="#demo" data-slide-to="1"></li>
         <li data-target="#demo" data-slide-to="2"></li>
       </ul>
 
+      <!-- The slideshow -->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
+        <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
 
+        <!-- Wrapper for slides -->
         <div class="carousel-inner">
 
           <div class="item active">
             <img src="{% static 'img/img1.jpeg' %}" style="width:100%;height:500px;">
             <div class="carousel-caption">
+              <h1 style="color:aliceblue">Learn today – Lead tomorrow</h1>
             </div>
           </div>
 
           <div class="item">
             <img src="{% static 'img/img2.jpeg' %}" style="width:100%;height:500px;">
             <div class="carousel-caption">
+              <h1 style="color:aliceblue">No child should be left behind</h1>
             </div>
           </div>
 
           <div class="item">
             <img src="{% static 'img/img3.jpeg' %}" style="width:100%;height:500px;">
             <div class="carousel-caption">
+              <h1 style="color:aliceblue">Opportunities for Lifelong Learning</h1>
             </div>
           </div>
         </div>
@@ -94,6 +142,124 @@
         <span class="glyphicon glyphicon-chevron-right"></span>
         <span class="sr-only">Next</span>
       </a>
+    </div>
+  </div><br /><br />
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card" style="width: 400px;height: 480px;">
+          <img class="card-img-top" src="{% static 'img/img6.jpg' %}" alt="Card image" style="width:80%;height:60%;">
+          <div class="card-body">
+            <h3 class="card-title" style="color:Blue;font-size:x-large;">Republic day</h3>
+            <p class="card-text" style="font-size:large">Celebrate Republic day 26 jan in our School</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="width: 400px;height: 480px;margin-right: 10px;">
+          <img class="card-img-top" src="{% static 'img/img9.jpg' %}" alt="Card image" style="width:80%;height:60%;">
+          <div class="card-body">
+            <h3 class="card-title" style="color:Blue;font-size:x-large;">Annual Function</h3>
+            <p class="card-text" style="font-size:large">This event organized by School</p>
+          </div>
+        </div>
+      </div>&nbsp;&nbsp;
+      <div class="col-sm-4">
+        <div class="card" style="width: 400px;height: 480px;">
+          <img class="card-img-top" src="{% static 'img/img7.jpg' %}" alt="Card image" style="width:80%;height:55%;">
+          <div class="card-body">
+            <h3 class="card-title" style="color:Blue;font-size:x-large;">Republic day</h3>
+            <p class="card-text" style="font-size:large">Celebrate Republic day 26 jan in our School</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card" style="width: 400px;height: 480px;">
+          <img class="card-img-top" src="{% static 'img/img6.jpg' %}" alt="Card image" style="width:80%;height:60%;">
+          <div class="card-body">
+            <h3 class="card-title" style="color:Blue;font-size:x-large;">Republic day</h3>
+            <p class="card-text" style="font-size:large">Celebrate Republic day 26 jan in our School</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card" style="width: 400px;height: 480px;margin-right: 10px;">
+          <img class="card-img-top" src="{% static 'img/img9.jpg' %}" alt="Card image" style="width:80%;height:60%;">
+          <div class="card-body">
+            <h3 class="card-title" style="color:Blue;font-size:x-large;">Annual Function</h3>
+            <p class="card-text" style="font-size:large">This event organized by School</p>
+          </div>
+        </div>
+      </div>&nbsp;&nbsp;
+      <div class="col-sm-4">
+        <div class="card" style="width: 400px;height: 480px;">
+          <img class="card-img-top" src="{% static 'img/img7.jpg' %}" alt="Card image" style="width:80%;height:55%;">
+          <div class="card-body">
+            <h3 class="card-title" style="color:Blue;font-size:x-large;">Republic day</h3>
+            <p class="card-text" style="font-size:large">Celebrate Republic day 26 jan in our School</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <div class="container-fluid" style="background-color:#141414 ;height: 380px; color: aliceblue;margin: left -3px;;">
+    <div class="row">
+      <div class="col-sm-4">
+        <h1 style="color: aliceblue;">Location</h1>
+      </div>
+      <div class="col-sm-4">
+        <h1 style="color: aliceblue;">Contact Us</h1>
+      </div>
+      <div class="col-sm-4">
+        <h1 style="color: aliceblue;">Opening hours</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+      <div class="col-sm-4">
+        <h3>Email:</h3>
+      </div>
+      <div class="col-sm-4">
+        <h3></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4" style="text-shadow:1px 1px red;">
+        <h3></h3>
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+    <div class="row">
+      <hr />
+      <marquee scrollamount="12">
+        <h4 style="font-size:large;">Grow your mind and better opportunities you will find</h4>
+      </marquee>
+      <hr />
+    </div>
+    <div class="row" style="text-shadow:1px 1px yellow; margin:20px;">
+      <a href="http://facebook.com" class="fa fa-facebook"></a>
+      <a href="http://twitter.com" class="fa fa-twitter"></a>
+      <a href="http://google.com" class="fa fa-google"></a>
+      <a href="http://linkedin.com" class="fa fa-linkedin"></a>
     </div>
   </div>
 
