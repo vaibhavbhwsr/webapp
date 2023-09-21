@@ -1,3 +1,4 @@
+{% extends "users/home.html" %}
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -12,8 +13,9 @@
 </head>
 
 <body>
+  {% block content %}
   <div class="container">
-    <div class="row">
+    <div class="row px-5">
       <div class="col-sm-6">
         <div class="container">
           <div class="card" style="width:400px">
@@ -39,7 +41,7 @@
         </div>
       </div>
     </div><br><br>
-    <div class="row">
+    <div class="row px-5">
       <div class="col-sm-6">
         <div class="container">
           <div class="card" style="width:400px">
@@ -67,6 +69,7 @@
           </div>
         </div>
       </div>
+  {% endblock content %}
 </body>
 
 </html>

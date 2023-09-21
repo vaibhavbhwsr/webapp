@@ -1,3 +1,4 @@
+{% extends "users/home.html" %}
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    {% block content %}
     <div class="container">
         <h1 class="text-center my-4">Library Book Slideshow</h1>
         <div id="bookCarousel" class="carousel slide" data-ride="carousel">
@@ -19,16 +21,18 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <!-- Card 1 -->
+                        {% for book in book_list %}
                         <div class="col-md-4">
                             <div class="card">
                                 <img src="{% static 'img/book1.jpg' %}" class="card-img-top" alt="Book 1">
                                 <div class="card-body">
-                                    <h5 class="card-title">Book 1 Title</h5>
-                                    <p class="card-text">Author: Author Name</p>
+                                    <h5 class="card-title">{{ book.title }}</h5>
+                                    <p class="card-text">Author: {{ book.author }}</p>
                                     <p class="card-text">Genre: Fiction</p>
                                 </div>
                             </div>
                         </div>
+                        {% endfor %}
                         <!-- Card 2 -->
                         <div class="col-md-4">
                             <div class="card">
@@ -100,6 +104,7 @@
             </a>
         </div>
     </div>
+    {% endblock content %}
 
     <!-- Include Bootstrap JS (jQuery and Popper.js are required) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
