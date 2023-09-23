@@ -2,7 +2,7 @@ services:
 
   # Django WSGI for Gunicorn
   wsgi_app:
-    container_name: mysite_wsgi
+    container_name: webapp_wsgi
     build:
       context: ./webapp
     volumes:
